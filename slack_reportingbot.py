@@ -3,7 +3,6 @@ import time
 from tabulate import tabulate
 import datetime
 import traceback
-import sys
 from datetime import datetime as dt
 from sql_query_to_df import get_data
 
