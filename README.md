@@ -20,4 +20,5 @@ Adding the feature of responding with csv, xlsx and txt files to the bot.
 - Python3 any version
 - Slack account
 - Python package: slackclient==1.3.1, time, tabulate==0.8.3, datetime, traceback, pandas==1.0.3, mysql-connector==2.2.9
+
 ```pip3 install slackclient==1.3.1 tabulate==0.8.3 traceback pandas==1.0.3 mysql-connector==2.2.9```
