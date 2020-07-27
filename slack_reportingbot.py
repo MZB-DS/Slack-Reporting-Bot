@@ -2,7 +2,6 @@ from slackclient import SlackClient
 import time
 from tabulate import tabulate
 import datetime
-import csv
 import traceback
 import sys
 from datetime import datetime as dt
@@ -13,7 +12,7 @@ token="" #Enter here your slack user bot access token
 slack_client = SlackClient(token)
 RTM_READ_DELAY = 1  # 1 second delay between reading from RTM
 EXAMPLE_COMMAND = 'getme help :- For supported features and commands'
-START_WITH = 'getme'
+START_WITH = 'getme' #Start of the slack bot command
 
 allowed_users=['Mustafa Bohra',"Mohammad","Kshitij"] #Enter the slack username of those to whom you want to give access of this bot.
 
@@ -49,8 +48,6 @@ def handle_command(command, channel):
   if command.startswith(START_WITH):
       response = reports(command)
 
-  if response=="Is_An_Attachment":
-      return
   else:
     slack_client.api_call(
         "chat.postMessage",
@@ -67,7 +64,7 @@ def reports(query):
 
     elif 'people_info' in query:
       city=query.split(' ')[2]
-      queries = "select name, address, contact, email, city from people_information where city='{}';".format(city)
+      queries = "select name, address, contact, email, city from people_information where city='{}';".format(city) # Enter your sql query here
 
       output = pretty_format(queries,'people_info')
       if output:
@@ -82,10 +79,10 @@ def reports(query):
 def pretty_format(queries, flag):
 
   if flag=='people_info':
-    column_names = ["Name", "Address", "Contact", "Email", "City"]
+    column_names = ["Name", "Address", "Contact", "Email", "City"] #Column names for your output dataframe after parsing your
     df = get_data(queries, column_names)
 
-  text = tabulate(df, headers='keys', tablefmt='psql')
+  text = tabulate(df, headers='keys', tablefmt='psql') #The tabulate package helps us convert a dataframe into sql table like format. This will help us visualise better in the bot chat window.
 
   text = "```" +str(text)+ "```"
   return text
