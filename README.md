@@ -2,7 +2,7 @@
 This repository contains python code for programming slack user bot. Slack is both free and paid messenger. The basic idea behind this code is to provide a setup where our python program is ready to receive whatever command is given to the slack user bot and also what to respond back to the bot. The feature provided in the code is to receive the command from bot in particular syntax, execute a sql query based on the received command and reply the sql output in a proper sql-table format to the slack user bot.
 
 ## How to use this code
-1. Sign in to the slack.
+1. Sign in to your slack account.
 2. Create a slack app from this link "https://api.slack.com/apps/new" to recieve an API token for your bot.
 3. Provide proper mysql host ip, username, password and any database name in ```sqlquery_to_df.py``` file.
 4. Provide in ```slack_reportingbot.py```, your slack bot api token in 'token' variable, your mysql select query and the respective column names for your output dataframe.
