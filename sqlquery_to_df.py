@@ -4,10 +4,10 @@ import mysql.connector
 def get_data(query,columns_list):
 
   mydb = mysql.connector.connect(
-    host='host_ip',
-    user='username',
-    passwd='password',
-    database='default_database'
+    host='host_ip', # Enter your mysql host ip here
+    user='username', # Enter your mysql username
+    passwd='password', # Enter mysql password
+    database='default_database' # Enter any database name
   )
 
   mycursor = mydb.cursor()
