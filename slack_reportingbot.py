@@ -6,7 +6,7 @@ import traceback
 from datetime import datetime as dt
 from sql_query_to_df import get_data
 
-token="" #Enter here your slack user bot access token
+token="" #Enter here your slack app api token
 
 slack_client = SlackClient(token)
 RTM_READ_DELAY = 1  # 1 second delay between reading from RTM
