@@ -33,7 +33,7 @@ def parse_bot_commands(slack_events):
   for event in slack_events:
     if event["type"] == "desktop_notification" and event['subtitle'] in allowed_users:
         
-      with open("Generated_Logs.csv", 'a') as newFile: # The file "Generated_Logs.csv" will store the time, user and command entered for every entered command
+      with open("Generated_Logs.csv", 'a') as newFile: # The file "Generated_Logs.csv" will store the time, user and command for every entered command.
         newFileWriter = csv.writer(newFile)
         newFileWriter.writerow(
             [event['subtitle'], event['content'], datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")])
@@ -62,7 +62,7 @@ def reports(query):
   try:  
 
     if 'help' in query:
-      help_section='''getme people_info <city>: Fetches people's information which lives in given city.'''
+      help_section='''getme people_info <city>: Fetches people's information which lives in given city.''' # This is the help menu where you can describe all the commands and their respective features.
       return help_section
 
     elif 'people_info' in query:
