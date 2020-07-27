@@ -1,5 +1,5 @@
 # Slack-Reporting-Bot
-This repository contains python code for programming slack user bot. Slack is both free and paid messenger. The basic idea behind this code is to provide a setup where our python program is ready to receive whatever command is given to the slack user bot and also what to reply back to the bot. The feature provided in the code is to receive the command from bot in particular syntax, execute a sql query based on the received command and reply the sql out put in a proper table format back to the slack user bot.
+This repository contains python code for programming slack user bot. Slack is both free and paid messenger. The basic idea behind this code is to provide a setup where our python program is ready to receive whatever command is given to the slack user bot and also what to respond back to the bot. The feature provided in the code is to receive the command from bot in particular syntax, execute a sql query based on the received command and reply the sql out put in a proper table format back to the slack user bot.
 
 ## How to use this code
 1. Sign in to the slack.
